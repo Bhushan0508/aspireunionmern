@@ -1,0 +1,31 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend for mongodb conecction",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bhushan0508/aspireunionmern.git"
+  },
+  "keywords": [
+    "react",
+    "front",
+    "end"
+  ],
+  "author": "Bhushan G",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bhushan0508/aspireunionmern/issues"
+  },
+  "homepage": "https://github.com/Bhushan0508/aspireunionmern#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongodb": "^6.2.0",
+    "mongoose": "^8.0.0"
+  }
+}
