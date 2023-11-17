@@ -33,11 +33,11 @@ const logConnection = (req, res, next) => {
   });
   
 
-//app.use(logConnection);
+app.use(logConnection);
 
 app.use('/exercises',exercisesRouter);
 app.use('/users',usersRouter);
 
-app.listen(port,'127.0.0.1',()=>{
+app.listen(port,'192.168.0.104',()=>{
     console.log(`Server is lisening on port:${port}`)
 });
