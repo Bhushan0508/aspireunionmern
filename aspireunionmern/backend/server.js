@@ -22,9 +22,22 @@ connection.once('open',()=>{
 const exercisesRouter = require('./routes/exercises');
 const usersRouter =  require('./routes/users.js');
 
+const logConnection = (req, res, next) => {
+    const clientIP = req.socket.remoteAddress;
+    console.log(`Client connected from ${clientIP}`);
+    next();
+  };
+
+  app.get('/test', (req, res) => {
+    res.send('Test endpoint reached!');
+  });
+  
+
+//app.use(logConnection);
+
 app.use('/exercises',exercisesRouter);
 app.use('/users',usersRouter);
 
-app.listen(port,()=>{
+app.listen(port,'127.0.0.1',()=>{
     console.log(`Server is lisening on port:${port}`)
 });

@@ -2,12 +2,14 @@ const router1 = require('express').Router();
 let User = require('../models/user.model');
 
 router1.route('/').get((req,res)=>{
+    console.log('Fetching all users')
     User.find()
     .then(users=>res.json(users))
     .catch(err=> res.status(400).json('Error: '+err));
 });
 
 router1.route('/add').post((req, res)=>{
+    console.log('Adding user')
     const username =req.body.username;
 
     const newUser = new User({username});
